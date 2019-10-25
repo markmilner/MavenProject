@@ -1,12 +1,11 @@
 pipeline {
     agent any
-    environment {
-    	def pom = readMavenPom file: 'Section-04c-01_JavaTutorial_MavenProject\\pom.xml'
-    }
     stages {
         stage('Clean') {
         	steps {
-	           	bat 'mvn clean'
+        		dir('Section-04c-01_JavaTutorial_MavenProject') {
+    				bat 'mvn clean'
+				}
 	        }
            
         }
