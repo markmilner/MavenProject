@@ -11,13 +11,17 @@ pipeline {
         }
         stage('Test') {
         	steps {
-	            bat 'mvn test' 
+        		dir('Section-04c-01_JavaTutorial_MavenProject') {
+    				bat 'mvn test'
+				}
 	        }
           
         }
         stage('Package') {
         	steps {
-	            bat 'mvn package'
+        		dir('Section-04c-01_JavaTutorial_MavenProject') {
+    				bat 'mvn package'
+				}
 	        }
            
         }
