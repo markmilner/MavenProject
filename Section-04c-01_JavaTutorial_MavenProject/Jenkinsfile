@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clean') {
         	steps {
-	           	bat 'mvn -f Section-04c-01_JavaTutorial_MavenProject clean'
+	           	bat 'mvn clean'
 	        }
            
         }
